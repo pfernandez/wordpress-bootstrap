@@ -62,15 +62,15 @@ jQuery(document).ready(function($) {
 	// Prevent submission of empty form
 	$('[placeholder]').parents('form').submit(function() {
 	  $(this).find('[placeholder]').each(function() {
-		var input = $(this);
-		if (input.val() == input.attr('placeholder')) {
-		  input.val('');
-		}
+			var input = $(this);
+			if (input.val() == input.attr('placeholder')) {
+				input.val('');
+			}
 	  })
 	});
-			
-	$('.alert-message').alert();
 	
-	$('.dropdown-toggle').dropdown();
+	//$('.alert-message').alert();
+	
+	//$('.dropdown-toggle').dropdown();
  
 });

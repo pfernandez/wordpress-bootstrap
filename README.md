@@ -1,7 +1,8 @@
 WP BOOTSTRAP
 ===================
 
-Bootstrap (http://getbootstrap.com) in WordPress theme form.
+[Bootstrap](http://getbootstrap.com) in WordPress theme form.
+
 
 GETTING STARTED
 _______________
@@ -9,18 +10,14 @@ _______________
 To get started, open Terminal or a command prompt and run:
 
 	cd path/to/wp-content/themes
-	git clone https://github.com/320press/wordpress-bootstrap.git
-	npm install
-	grunt dev
+	git clone https://github.com/pfernandez/wordpress-bootstrap.git
 
 FEATURES
 ________
 
-We’ve built the WP Bootstrap theme so that it could be used as-is as a very basic theme or as a starting point for theme developers. It uses v3.3.1 of Bootstrap.
+This is a fork of the [original project](https://github.com/320press/wordpress-bootstrap) by 320press. It features full-width page templates and a more minimal default Bootstrap configuration, leaving out all but the bare JS essentials. It works well either as a parent theme or as starter theme to build from.
 
-WP-Bootstrap uses grunt as a task manager to help aid development. Check out the gruntfile.js file for more detail on the default tasks. WP-Bootstrap comes with the livereload, less, grunticon and more tasks out of the box. 
-
-Watch or star this project to keep up with its progress.
+Grunt and NPM features have been removed outside of the `bower_components` directory. Dependencies are handled exclusively through Bower to make it simple to drop in a custom Bootstrap intallation.
 
 Multi-Lingual
 _____________
@@ -32,15 +29,10 @@ ______________
 
 We’ve packaged four different page templates into this theme.
 
-    - Homepage template (seen on the homepage of this site - http://www.320press.com/wp-bootstrap)
-    - Standard page with right sidebar (this page)
-    - Page with left sidebar
-    - Full width page
-
-Theme Options Panel
-___________________
-
-We've removed the custom theme options panel in version 3.0. Currently working on moving all of the options that used to appear there over to the theme customizer. 
+    - Home page
+    - Default page with right sidebar
+    - Full width wide page
+    - Full width narrow page
 
 Shortcodes
 __________
@@ -50,11 +42,11 @@ We’ve built in some shortcodes so you can easily add UI elements found in Boot
 Sidebars
 ________
 
-There are two different sidebars. One for the homepage and one for the other pages. Add widgets to them.
+There is one sidebar, which appears on default pages. Add widgets to it.
 
 CONTRIBUTE!
 ___________
 
 This project would not exist in its current state today were it not for lots of generous folks who have contributed to it. Thank you! 
 
-If you'd like to commit to this project please submit a pull request and I will do my best to merge appropriately.
+The philosophy is to keep the project minimal, up to date, and bug-free. If you'd like to commit please submit a pull request and I will do my best to merge appropriately. 
