@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     less: {
       dist: {
         files: {
-          'library/dist/css/styles.css': [
+          'library/dist/css/styles.min.css': [
             'library/less/styles.less'
           ]
         },
@@ -32,9 +32,23 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'library/dist/js/scripts.min.js': [
-            'library/js/*.js'
+            'library/js/*.js',
+            
+            // Uncomment bootstrap js files here as needed.
+            
+            //'bower_components/bootstrap/js/affix.js',
+            //'bower_components/bootstrap/js/alert.js',
+            //'bower_components/bootstrap/js/button.js',
+            //'bower_components/bootstrap/js/carousel.js',
+            //'bower_components/bootstrap/js/collapse.js',
+            //'bower_components/bootstrap/js/dropdown.js',
+            //'bower_components/bootstrap/js/modal.js',
+            //'bower_components/bootstrap/js/popover.js',
+            //'bower_components/bootstrap/js/scrollspy.js',
+            //'bower_components/bootstrap/js/tab.js',
+            //'bower_components/bootstrap/js/tooltip.js',
+            //'bower_components/bootstrap/js/transition.js'
           ]
-          // Consider adding bootstrap js files here to consolidate your browser requests
         },
         options: {
           // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
@@ -58,7 +72,7 @@ module.exports = function(grunt) {
     version: {
       assets: {
         files: {
-          'functions.php': ['library/dist/css/styles.css', 'library/dist/js/scripts.min.js']
+          'functions.php': ['library/dist/css/styles.min.css', 'library/dist/js/scripts.min.js']
         }
       }
     },
@@ -84,7 +98,7 @@ module.exports = function(grunt) {
           livereload: true
         },
         files: [
-          'library/dist/css/styles.css',
+          'library/dist/css/styles.min.css',
           'library/js/*',
           'style.css',
           '*.php'

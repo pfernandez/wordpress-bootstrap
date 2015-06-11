@@ -49,19 +49,21 @@
 
 						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" 
 								title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<?php if ( get_theme_mod( 'ad_logo' ) ) : ?>
-							<img src="<?php echo esc_url( get_theme_mod( 'ad_logo' ) ); ?>" 
+							<?php if ( get_theme_mod( 'wp_bootstrap_logo' ) ) : ?>
+							<img src="<?php echo esc_url( get_theme_mod( 'wp_bootstrap_logo' ) ); ?>" 
 								alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 							<?php else : ?>
-							<h1><?php bloginfo('name'); ?></h1>
+							<?php bloginfo('name'); ?>
 							<?php endif; ?>
 						</a>
 					</div>
-
+					
+					<?php if ( has_nav_menu( 'main_nav' ) ) : ?>
 					<div class="collapse navbar-collapse navbar-responsive-collapse navbar-right">
 						<?php wp_bootstrap_main_nav(); ?>
 					</div>
-
+					<?php endif; ?>
+					
 				</div> <!-- end .container -->
 			</div> <!-- end .navbar -->
 			

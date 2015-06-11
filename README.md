@@ -11,13 +11,15 @@ To get started, open Terminal or a command prompt and run:
 
 	cd path/to/wp-content/themes
 	git clone https://github.com/pfernandez/wordpress-bootstrap.git
+	npm install
+	grunt dev
 
 FEATURES
 ________
 
-This is a fork of the [original project](https://github.com/320press/wordpress-bootstrap) by 320press. It features full-width page templates and a more minimal default Bootstrap configuration, leaving out all but the bare JS essentials. It works well either as a parent theme or as starter theme to build from.
+This is a fork of the [original project](https://github.com/320press/wordpress-bootstrap) by 320press. It features full-width page templates and a more minimal default Bootstrap configuration, omitting the JS, box shadows and rounded corners. It works well either as a parent theme or as starter theme to build from.
 
-Grunt and NPM features have been removed outside of the `bower_components` directory. Dependencies are handled exclusively through Bower to make it simple to drop in a custom Bootstrap intallation.
+JS files can be added on an as-needed basis by either uncommenting them in `Gruntfile.js` and recompiling, or by enqueuing them in a child theme's `functions.php` file.
 
 Multi-Lingual
 _____________

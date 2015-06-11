@@ -34,11 +34,11 @@ div[id*='attachment_']{
 	height: 100%;
 }
 
-#main .hero-unit img{
+#main .hero-unit img {
 	margin-bottom: 1em;
 }
 
-#main article img{
+#main img {
 	height: auto;
 	max-width: 100%;
 }
@@ -56,6 +56,27 @@ img.alignright{
 img.aligncenter{
 	display: block;
 	margin: 0 auto;
+}
+
+#main ul, 
+#main ol {
+	overflow: hidden; // fixes bullet overlap next to floated images
+}
+
+blockquote {
+	font-style: italic;
+	font-size: 18px;
+	border: none;
+	margin: 0 0 15px 10px;
+	quotes: "“" "”" "‘" "’";
+	
+	p:before {
+		content: open-quote;
+	}
+	
+	p:after {
+		content: close-quote;
+	}
 }
 
 .archive #main .post h3{

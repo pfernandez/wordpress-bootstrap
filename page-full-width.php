@@ -17,7 +17,7 @@ Template Name: Full Width Page
 			<div class="top-banner" style="background: <?php the_overlay(); ?>,
 				url( <?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)) ?> );">
 				<div class="container page-header">
-					<div id="content" class="clearfix row">
+					<div class="clearfix row">
 						<div class="col-md-12">
 							<h1><?php the_title(); ?></h1>
 						</div>
@@ -26,7 +26,7 @@ Template Name: Full Width Page
 			</div>
 			<?php else : ?>
 			<div class="container page-header">
-				<div id="content" class="clearfix row">
+				<div class="clearfix row">
 					<div class="col-md-12">
 						<h1><?php the_title(); ?></h1>
 					</div>

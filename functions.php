@@ -96,7 +96,7 @@ function wp_bootstrap_footer_links() {
     array(
       'menu' => 'footer_links', /* menu name */
       'theme_location' => 'footer_links', /* where in the theme it's assigned */
-      'container_class' => 'footer-links clearfix', /* container class */
+      'container_class' => 'clearfix', /* container class */
       'fallback_cb' => 'wp_bootstrap_footer_links_fallback' /* menu fallback */
     )
   );
@@ -160,7 +160,7 @@ register_sidebar(array(
   	'before_widget' => '<div id="%1$s" class="widget %2$s">',
   	'after_widget' => '</div>',
   	'before_title' => '<h4 class="widgettitle">',
-  	'after_title' => '</h4>',
+  	'after_title' => '</h4>'
   ));
   
   register_sidebar(array(
@@ -168,7 +168,9 @@ register_sidebar(array(
   	'name' => 'Four Column Footer',
   	'description' => 'Requires four widgets, one for each column.',
   	'before_widget' => '<div id="%1$s" class="widget %2$s col-sm-3">',
-  	'after_widget' => '</div>'
+  	'after_widget' => '</div>',
+  	'before_title' => '<h4 class="widgettitle">',
+  	'after_title' => '</h4>'
   ));
   
   register_sidebar(array(
@@ -234,7 +236,20 @@ function wp_bootstrap_comments($comment, $args, $depth) {
 		</article>
     <!-- </li> is added by wordpress automatically -->
 <?php
-} // don't remove this bracket!
+}
+
+// Customze the main comment form.
+function wp_bootstrap_comment_form_defaults( $form_fields ) {
+    $form_fields['comment_field'] = '<p class="comment-form-comment">'
+    	. '<label for="comment">' . _x( 'Comment', 'noun' ) . '</label>'
+    	. '<textarea id="comment" name="comment" cols="45" rows="6" aria-required="true">'
+    	. '</textarea></p>';
+    $form_fields['comment_notes_after'] = '';
+    $form_fields['class_submit'] = 'btn btn-primary btn-lg text-right';
+    $form_fields['label_submit'] = __( 'Comment' );
+    return $form_fields;
+}
+add_filter( 'comment_form_defaults', 'wp_bootstrap_comment_form_defaults' );		
 
 // Display trackbacks/pings callback function
 function list_pings($comment, $args, $depth) {
@@ -432,17 +447,7 @@ if( !function_exists("wp_bootstrap_theme_styles") ) {
         // and put it in the appropriate directory if you want to make any changes to the master 
         // bootstrap.css.
 				wp_register_style( 'wpbs', 
-					get_stylesheet_directory_uri() 
-						. '/bower_components/bootstrap/dist/css/bootstrap.min.css', 
-					array(), 
-					'1.0', 
-					'all' 
-				);
-				wp_enqueue_style( 'wpbs' );
-				
-				// Our custom LESS files that extend Bootstrap for WordPress.
-				wp_register_style( 'wpbs', 
-        	get_template_directory_uri() . '/library/dist/css/styles.min.css', 
+        	get_template_directory_uri() . '/library/dist/css/styles.83ecbe59.min.css', 
         	array(), 
         	'1.0', 
         	'all' 
@@ -470,17 +475,11 @@ if( !function_exists( "wp_bootstrap_theme_js" ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    // By default, this is a minimal subset of the possible Bootstrap js distribution files.
-    // To include more components, recomplie Bootstrap per your requirements. 
-		wp_register_script( 'bootstrap', 
-			get_stylesheet_directory_uri() 
-				. '/bower_components/bootstrap/dist/js/bootstrap.min.js', 
-			array('jquery'), 
-			'1.2' );
-
+    // By default, this inculdes a minimal subset of the possible Bootstrap js distribution files.
+    // To include more components, add files to Grunt.js and recompile.
     wp_register_script( 'wpbs-js', 
-      get_template_directory_uri() . '/library/dist/js/scripts.min.js',
-      array('bootstrap'), 
+      get_template_directory_uri() . '/library/dist/js/scripts.d7c79406.min.js',
+      array('jquery', 'bootstrap'), 
       '1.2' );
   
     wp_register_script( 'modernizr', 
@@ -622,19 +621,19 @@ add_filter( 'the_content', 'wp_bootstrap_filter_ptags_on_images' );
 
 // Add a logo uploader to the theme customizer. 
 function wp_bootstrap_theme_customizer( $wp_customize ) {
-	$wp_customize->add_section( 'ad_logo_section' , array(
+	$wp_customize->add_section( 'wp_bootstrap_logo_section' , array(
 		  'title'       => __( 'Logo', 'wp-bootstrap' ),
 		  'priority'    => 30,
 		  'description' => 'Upload a logo to replace the default site name in the header.',
 	));
-	$wp_customize->add_setting( 'ad_logo' );
+	$wp_customize->add_setting( 'wp_bootstrap_logo' );
 	$wp_customize->add_control( new WP_Customize_Image_Control( 
 		$wp_customize, 
-		'ad_logo', 
+		'wp_bootstrap_logo', 
 		array(
 		  'label'    => __( 'Logo', 'wp-bootstrap' ),
-		  'section'  => 'ad_logo_section',
-		  'settings' => 'ad_logo',
+		  'section'  => 'wp_bootstrap_logo_section',
+		  'settings' => 'wp_bootstrap_logo',
 	)));
 }
 add_action('customize_register', 'wp_bootstrap_theme_customizer');

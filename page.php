@@ -11,26 +11,29 @@ The default page template
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 	<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-	
+
 		<header>
-			
-			
-			<div class="container page-header">
+			<?php
+				if ( $has_thumbnail = has_post_thumbnail() ) {
+					$caption = get_post(get_post_thumbnail_id())->post_excerpt;
+					$has_caption = !empty( $caption );
+				} 
+			?>
+			<div class="container <?php echo ( $has_caption ? '' : 'page-header' ); ?>">
 				<div id="content" class="clearfix row">
 					<div class="col-md-8 col-md-offset-2">
 						<h1><?php the_title(); ?></h1>
-						<?php if ( has_post_thumbnail() ) :
-							the_post_thumbnail( 'full' ); 
-							$image_data = wp_get_attachment_metadata( get_post_thumbnail_id() );
-							$caption = $image_data['image_meta']['caption'];
-						?>
-						
-						
+						<?php if ( $has_thumbnail ) : ?>
+						<div class="<?php echo ( $has_caption ? 'wp-caption' : '' ); ?>">
+							<?php the_post_thumbnail( 'full' ); ?>
+							<?php if ( $has_caption ) : ?>
+								<p class="wp-caption-text"><?php echo $caption ?></p>
+							<?php endif; ?>
+						</div>
 						<?php endif; ?>
 					</div>
 				</div>
 			</div>
-			
 		</header> <!-- end article header -->
 		
 		<div class="container">

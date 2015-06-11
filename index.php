@@ -24,38 +24,19 @@
 				</section>
 				
 				<div class="col-sm-10">
-					
-					<?php if( has_post_thumbnail() ) {
-						$thumb_class = 'has-thumbnail';
-						$thumb_style = 'background-image: '
-							. 'linear-gradient(to bottom, rgba(5, 3, 4, 0.3) 0%, rgba(5, 3, 4, 0.9) 100%), '
-							. 'url(' . wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) . ');';
-					} else {
-						$thumb_class = '';
-						$thumb_style = '';
-					} ?>
-					
-					<div class="<?php echo $thumb_class; ?>" style="<?php echo $thumb_style; ?>">
-						<header>
-							<h1><a href="<?php the_permalink() ?>" rel="bookmark"
-										title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-						</header> <!-- end article header -->
-			
-						<section class="post_content clearfix">
-							<?php the_excerpt(); ?>
-						</section> <!-- end article section -->
-					
-						<footer>
-							<?php the_tags('<div class="blog-tags"><span class="tags-title">' 
-								. __("Tags","wpbootstrap") . ':</span> ', ', ', '</div>'); ?>
-						</footer> <!-- end article footer -->
-					</div>
-				</div>
-			
-				<div class="row">
-					<div class="col-sm-12">
-						<hr>
-					</div>
+					<header>
+						<h1><a href="<?php the_permalink() ?>" rel="bookmark"
+									title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+					</header> <!-- end article header -->
+		
+					<section class="post_content clearfix">
+						<?php the_excerpt(); ?>
+					</section> <!-- end article section -->
+				
+					<footer>
+						<?php the_tags('<div class="blog-tags"><span class="tags-title">' 
+							. __("Tags","wpbootstrap") . ':</span> ', ', ', '</div>'); ?>
+					</footer> <!-- end article footer -->
 				</div>
 				
 			</article> <!-- end article -->

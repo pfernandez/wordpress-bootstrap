@@ -5,23 +5,24 @@
 			
 				<section class="four-column-footer">
 					<div class="container">
-						<h1><?php bloginfo('name'); ?></h1>
 						<div class="row">
-								<?php if ( !function_exists('dynamic_sidebar') 
-				        	|| !dynamic_sidebar('four-column-footer') ) : ?>
-				        <?php endif; ?>
+								<?php if ( is_active_sidebar( 'four-column-footer' ) ) {
+				        	dynamic_sidebar( 'four-column-footer' );
+				        } ?>
 						</div>
 					</div>
 				</section>
 			
 				<section role="contentinfo">
 					<small class="clearfix container">
-				      <div class="pull-left">
-				        <?php if ( !function_exists('dynamic_sidebar') 
-				        	|| !dynamic_sidebar('footer-attribution') ) : ?>
-				        <?php endif; ?>
-				      </div>
-							<nav class="pull-right"><?php wp_bootstrap_footer_links(); ?></nav>
+						<?php if( is_active_sidebar( 'footer-attribution' ) ) : ?>
+			      <div class="pull-left footer-attribution">
+			        <?php dynamic_sidebar( 'footer-attribution' ); ?>
+			      </div>
+				    <?php endif; ?>
+				    <?php if ( has_nav_menu( 'footer_links' ) ) : ?>
+						<nav class="pull-right footer-links"><?php wp_bootstrap_footer_links(); ?></nav>
+						<?php endif; ?>
 					</small>
 				</section>
 			</footer> <!-- end footer -->

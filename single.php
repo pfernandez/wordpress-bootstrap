@@ -32,11 +32,6 @@
 			<div class="row">
 		
 				<div class="col-md-2 left-blog-sidebar">
-					
-					<section class="social">
-						<?php echo do_shortcode("[ssba]"); ?>
-					</section>
-					
 					<section class="meta">
 						<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate>
 							<?php echo get_the_date('F jS, Y', '','', FALSE); ?>
@@ -50,12 +45,11 @@
 							<em><?php the_category(', '); ?></em>
 						</p>
 					</section>
-					
 				</div>
 				
 				<div class="col-md-7">
 				
-					<section class="post-content clearfix" itemprop="articleBody">
+					<section class="post_content clearfix" itemprop="articleBody">
 						<?php the_content(); ?>
 						<?php wp_link_pages(); ?>
 					</section>

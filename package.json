@@ -1,21 +1,16 @@
 {
   "name": "wp_bootstrap",
-  "version": "3.2.0",
-  "author": "Chris Barnes <barnes.chris@gmail.com>",
-  "homepage": "http://cbarn.es",
+  "version": "3.3.4",
+  "author": "Paul Fernandez <paul@artsdigital.co>",
+  "homepage": "http://artsdigital.co",
   "repository": {
     "type": "git",
-    "url": "https://github.com/320press/wordpress-bootstrap.git"
+    "url": "https://github.com/pfernandez/wordpress-bootstrap.git"
   },
   "bugs": {
-    "url": "https://github.com/320press/wordpress-bootstrap/issues"
+    "url": "https://github.com/pfernandez/wordpress-bootstrap/issues"
   },
-  "licenses": [
-    {
-      "type": "GNU",
-      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
-    }
-  ],
+  "license": "GPL-2.0",
   "engines": {
     "node": ">= 0.10.0"
   },
