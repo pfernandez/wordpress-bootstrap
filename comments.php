@@ -22,8 +22,8 @@ The comments page for Bones
 
 	<nav id="comment-nav">
 		<ul class="clearfix">
-	  		<li><?php previous_comments_link( __("Older comments","wpbootstrap") ) ?></li>
-	  		<li><?php next_comments_link( __("Newer comments","wpbootstrap") ) ?></li>
+  		<li><?php previous_comments_link( __("Older comments","wpbootstrap") ) ?></li>
+  		<li><?php next_comments_link( __("Newer comments","wpbootstrap") ) ?></li>
 	 	</ul>
 	</nav>
 	
@@ -43,8 +43,8 @@ The comments page for Bones
 	
 	<nav id="comment-nav">
 		<ul class="clearfix">
-	  		<li><?php previous_comments_link( __("Older comments","wpbootstrap") ) ?></li>
-	  		<li><?php next_comments_link( __("Newer comments","wpbootstrap") ) ?></li>
+  		<li><?php previous_comments_link( __("Older comments","wpbootstrap") ) ?></li>
+  		<li><?php next_comments_link( __("Newer comments","wpbootstrap") ) ?></li>
 		</ul>
 	</nav>
 

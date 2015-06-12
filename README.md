@@ -33,8 +33,7 @@ We’ve packaged four different page templates into this theme.
 
     - Home page
     - Default page with right sidebar
-    - Full width wide page
-    - Full width narrow page
+    - Full width page
 
 Shortcodes
 __________

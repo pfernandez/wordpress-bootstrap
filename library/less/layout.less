@@ -119,28 +119,65 @@ input, textarea, select, .uneditable-input {
 	white-space: nowrap;
 }
 
+#main article#post-not-found {
+	margin-bottom: 60px;
+
+	@media(min-width: @screen-sm-min) {
+		margin-bottom: 400px;
+	}
+	
+	.search-form {
+		margin-top: 30px;
+	}
+}
+
+.footer {
+	background: #f8f8f8;
+	border-top: 1px solid #e7e7e7;
+}
+
 .four-column-footer {
+	padding-top: 30px;
+
 	ul {
 		list-style-type: none;
 		padding-left: 0;
 	}
 }
 
+.sub-footer {
+	font-size: small;
+}
+
 .footer-attribution {
-	margin-left: 20px;
+	.widget {
+		margin: 20px;
+	}
+	
+	@media(min-width: @screen-sm-min) {
+		float: left;
+	}
 }
 
 .footer-links {
-	margin-bottom: 20px;
-	margin-right: 20px;
-	
+	margin: 20px;
+
 	.menu {
 		list-style-type: none;
-		margin-left: 10px;
+		padding: 0;
+		margin: 0;
+	}
+	
+	li {
+		margin-right: 10px;
+	}
+	
+	@media(min-width: @screen-sm-min) {
+		float: right;
 		
 		li {
 			float: left;
-			margin-right: 10px;
 		}
 	}
 }
+

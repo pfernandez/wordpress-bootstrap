@@ -1,30 +1,26 @@
-
-			
-			
 			<footer class="footer">
 			
+				<?php if( is_active_sidebar( 'four-column-footer' ) ) : ?>
 				<section class="four-column-footer">
 					<div class="container">
 						<div class="row">
-								<?php if ( is_active_sidebar( 'four-column-footer' ) ) {
-				        	dynamic_sidebar( 'four-column-footer' );
-				        } ?>
+							<?php dynamic_sidebar( 'four-column-footer' ); ?>
 						</div>
 					</div>
 				</section>
+				<?php endif; ?>
 			
-				<section role="contentinfo">
-					<small class="clearfix container">
-						<?php if( is_active_sidebar( 'footer-attribution' ) ) : ?>
-			      <div class="pull-left footer-attribution">
-			        <?php dynamic_sidebar( 'footer-attribution' ); ?>
-			      </div>
-				    <?php endif; ?>
-				    <?php if ( has_nav_menu( 'footer_links' ) ) : ?>
-						<nav class="pull-right footer-links"><?php wp_bootstrap_footer_links(); ?></nav>
-						<?php endif; ?>
-					</small>
+				<section class="sub-footer clearfix" role="contentinfo">
+					<?php if( is_active_sidebar( 'footer-attribution' ) ) : ?>
+		      <div class="footer-attribution">
+		        <?php dynamic_sidebar( 'footer-attribution' ); ?>
+		      </div>
+			    <?php endif; ?>
+			    <?php if( has_nav_menu( 'footer_links' ) ) : ?>
+					<nav class="footer-links"><?php wp_bootstrap_footer_links(); ?></nav>
+					<?php endif; ?>
 				</section>
+				
 			</footer> <!-- end footer -->
 				
 		<!--[if lt IE 7 ]>

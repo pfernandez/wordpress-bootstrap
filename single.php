@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
 <main id="main" role="main">
+
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" 
 		itemscope itemtype="http://schema.org/BlogPosting">
 		
@@ -70,22 +71,20 @@
 					
 				</div>
 				
-<?php endwhile; else : ?>
+	<?php endwhile; else : ?>
 	
+	<article id="post-not-found" class="col-md-9">
 		<div class="container">
 			<div class="row">
-				<article id="post-not-found" class="col-md-9">
-					<header>
-						<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
-					</header>
-					<section class="post_content">
-						<p><?php _e("Sorry, but the requested resource was not found on this site.", 
-							"wpbootstrap"); ?></p>
-					</section>
-					<footer>
-					</footer>
+				<header>
+					<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
+				</header>
+				<section class="post_content">
+					<p><?php _e("Sorry, but the requested resource was not found on this site.", 
+						"wpbootstrap"); ?></p>
+				</section>
 	
-<?php endif; ?>
+	<?php endif; ?>
 	
 				<aside class="col-md-3 right-blog-sidebar">
 					<?php get_sidebar(); ?>
@@ -93,7 +92,6 @@
 		
 			</div> <!-- /.row -->
 		</div> <!-- /.container -->
-
 	</article>
 </main>
 

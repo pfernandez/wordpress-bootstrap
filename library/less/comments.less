@@ -5,88 +5,173 @@ WP-Bootstrap - Comments
 */
 
 
+.comments-section {
+	margin-top: 40px;
 
+	h3 {
+		margin-bottom: 5px;
+	}
+	
+	.logged-in-as {
+		clear: both;
+	}
+	
+	.logged-in-as,
+	.comment-notes {
+		margin-bottom: 16px;
+	}
+	
+	label {
+		line-height: 1;
+		font-size: smaller;
+	}
+	
+	.required {
+		font-style: normal;
+		font-size: small;
+	}
 
-#comments{
-	line-height: 24px;
-	margin-bottom: 18px;
+	.form-submit {
+		text-align: right;
+		
+		input[type='submit'] {
+			.btn;
+			.btn-primary;
+		}
+	}
+	
+	.comment-form-author input, 
+	.comment-form-email input, 
+	.comment-form-url input, 
+	.comment-form-comment input, 
+	.comment-form-author textarea, 
+	.comment-form-email textarea, 
+	.comment-form-url textarea, 
+	.comment-form-comment textarea {
+		display: block;
+		width: 100%;
+		padding: 6px 12px;
+	}
+	
+	.comment {
+		padding: 0 0 0 30px;
+	}
+	
+	.comment article {
+		padding: 15px 0 25px 0 !important;
+		border-bottom: 1px solid #eee;
+
+		.comment .vcard > div {
+			margin-top: 8px;
+			padding: 0 10px;
+		}
+	
+		h4 {
+			margin-top: 0;
+			line-height: 1;
+			float: left;
+		}
+	
+		.comment-edit-link {
+			.btn;
+			.btn-xs;
+			.btn-default;
+			float: right;
+		}
+	
+		div.avatar {
+			padding-right: 8px;
+		}
+	
+		.comment-text {
+			.clearfix;
+		}
+	
+		p:first-of-type {
+			clear: both;
+		}
+	
+		p {
+			 margin-bottom: 15px;
+		}
+
+		time {
+			font-size: smaller;
+			float: left;
+		}
+
+		.comment-reply-link {
+			.btn;
+			.btn-sm;
+			.btn-primary;
+			float: right;
+		}
+	}
+	
+	@media(min-width: @screen-lg-min) {
+		.comment-form-author, 
+		.comment-form-email {
+			width: 48%;
+			float: left;
+		}
+		
+		.comment-form-author {
+			margin-right: 2%;
+		}
+		
+		.comment-form-email {
+			margin-left: 2%;
+		}
+	}
 }
 
 ol.commentlist,
-ol.commentlist ul.children{
+ol.commentlist ul.children {
 	list-style-type: none;
 	padding-left: 0;
 }
 
-.comment .vcard > div{
-	margin-top: 8px;
-	padding: 0 10px;
+ol.commentlist {
+
+	li {
+		padding-right: 10px;
+	}
+
+	& > li {
+		padding-left: 0;
+	}
+	
+	#respond {
+		padding: 5px 10px;
+	}
 }
 
-ol.commentlist time{
-	font-size: .8em;
-	color: #eeeeee;
+#pings {
+	margin-bottom: 10px;
 }
 
-ol.commentlist div.comment-author{
-	position: relative;
+ol.pinglist {
+	list-style-type: none;
+	margin: 0 0 10px 0;
 }
 
-ol.commentlist a.comment-edit-link{
-	color: #ffffff;
-	text-decoration: none;
-	padding-left: 5px;
+#reply-title {
+	 margin-top: 15px;
 }
 
-ol.commentlist span.edit-comment{
-	position: absolute;
-	right: 0;
-	top: 8px;
-}
-
-ol.commentlist li.bypostauthor{
-	background-color: #dddddd;
-}
-
-ol.commentlist ul.children li{
-	background-color: #cccccc;
-}
-
-ol.commentlist ul.children li ul.children li{
-	background-color: #bbbbbb;
-}
-
-ol.commentlist ul.children li ul.children li ul.children li{
-	background-color: #aaaaaa;
-}
-
-ol.commentlist article{
-	border-bottom: none !important;
-}
-
-a.comment-reply-link{
-	position: absolute;
-	right: 0;
-	bottom: 0;
-
-	.btn;
-	.btn-sm;
-	.btn-success;
-}
-
-#cancel-comment-reply-link{
+#cancel-comment-reply-link {
 	.btn;
 	.btn-xs;
-	.btn-warning;
-	margin-left: 1em;
+	.btn-default;
+	float: right;
 }
 
-#comment-nav ul{
+#comment-nav ul {
 	list-style-type: none;
 	margin: 0;
 }
 
-#comment-form-elements{
+#comment-form-elements {
 	list-style-type: none;
 	margin: 0;
 }
@@ -94,62 +179,28 @@ a.comment-reply-link{
 .comment-form-author,
 .comment-form-email,
 .comment-form-url,
-.comment-form-comment{
+.comment-form-comment {
 	.form-group;
 
 	input,
-	textarea{
+	textarea {
 		.form-control;
 	}
 
-	textarea{
+	textarea {
 		height: auto;
 	}
 }
 
-.form-allowed-tags{
-	code{
+.form-allowed-tags {
+	code {
 		white-space: normal;
 	}
 }
 
-.form-submit{
-	input[type='submit']{
+.form-submit {
+	input[type='submit'] {
 		.btn;
 		.btn-primary;
 	}
-}
-
-.comment .vcard .avatar{
-	padding-right: 0;
-}
-
-.comment .vcard .comment-text{
-	margin-left: 0;
-}
-
-img.avatar{
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #dedede;
-	border-right: 1px solid #dedede;
-	border-left: 1px solid #ddd;
-	
-}
-
-ol.commentlist li{
-	padding-right: 10px;
-	background-color: #F0F0F0;
-}
-
-#pings{
-	margin-bottom: 9px;
-}
-
-ol.pinglist{
-	list-style-type: none;
-	margin: 0 0 9px 0;
-}
-
-ol.commentlist #respond{
-	padding: 5px 10px;
 }

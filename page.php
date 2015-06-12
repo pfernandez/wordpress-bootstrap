@@ -21,7 +21,7 @@ The default page template
 			?>
 			<div class="container <?php echo ( $has_caption ? '' : 'page-header' ); ?>">
 				<div id="content" class="clearfix row">
-					<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-9 col-md-offset-1">
 						<h1><?php the_title(); ?></h1>
 						<?php if ( $has_thumbnail ) : ?>
 						<div class="<?php echo ( $has_caption ? 'wp-caption' : '' ); ?>">
@@ -38,7 +38,7 @@ The default page template
 		
 		<div class="container">
 			<div id="content" class="clearfix row">
-				<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-9 col-md-offset-1">
 
 					<section class="post_content">
 						<?php the_content(); ?>			
@@ -65,8 +65,6 @@ The default page template
 			<p><?php _e("Sorry, but the requested resource was not found on this site.",
 				"wpbootstrap"); ?></p>
 		</section>
-		<footer>
-		</footer>
 	</div>
 
 	<?php endif; ?>
