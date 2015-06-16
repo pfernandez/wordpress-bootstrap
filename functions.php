@@ -245,7 +245,7 @@ function wp_bootstrap_comment_form_defaults( $form_fields ) {
     	. '<textarea id="comment" name="comment" cols="45" rows="6" aria-required="true">'
     	. '</textarea></p>';
     $form_fields['comment_notes_after'] = ''; // don't show allowed HTML tags
-    $form_fields['class_submit'] = 'btn btn-primary btn-lg text-right';
+    $form_fields['class_submit'] = 'btn btn-primary';
     $form_fields['label_submit'] = __( 'Comment' );
     return $form_fields;
 }
@@ -447,7 +447,7 @@ if( !function_exists( 'wp_bootstrap_theme_styles' ) ) {
     // and put it in the appropriate directory if you want to make any changes to the master 
     // bootstrap.css.
 		wp_register_style( 'wpbs', 
-    	get_template_directory_uri() . '/library/dist/css/styles.89422354.min.css', 
+    	get_template_directory_uri() . '/library/dist/css/styles.283fe4ca.min.css', 
     	array(), 
     	'1.0', 
     	'all' 
