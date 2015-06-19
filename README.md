@@ -1,7 +1,7 @@
 WP BOOTSTRAP
 ===================
 
-[Bootstrap](http://getbootstrap.com) in WordPress theme form. You can view it live on the [example site](base.artsdigital.co).
+[Bootstrap](http://getbootstrap.com) in WordPress theme form. You can view it live on the [example site](http://base.artsdigital.co).
 
 
 GETTING STARTED
