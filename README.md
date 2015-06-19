@@ -1,7 +1,7 @@
 WP BOOTSTRAP
 ===================
 
-[Bootstrap](http://getbootstrap.com) in WordPress theme form.
+[Bootstrap](http://getbootstrap.com) in WordPress theme form. You can view it live on the [example site](base.artsdigital.co).
 
 
 GETTING STARTED
@@ -17,7 +17,7 @@ To get started, open Terminal or a command prompt and run:
 FEATURES
 ________
 
-This is a fork of the [original project](https://github.com/320press/wordpress-bootstrap) by 320press. It features full-width page templates and a more minimal default Bootstrap configuration, omitting the JS, box shadows and rounded corners. It works well either as a parent theme or as starter theme to build from.
+This is a (fairly heavily) modified fork of the [original project](https://github.com/320press/wordpress-bootstrap) by 320press. It features full-width page templates and a more minimal default Bootstrap configuration, omitting the JS, box shadows and rounded corners. It works well either as a parent theme or as starter theme to build from.
 
 JS files can be added on an as-needed basis by either uncommenting them in `Gruntfile.js` and recompiling, or by enqueuing them in a child theme's `functions.php` file.
 

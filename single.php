@@ -60,7 +60,7 @@
 							. __("Tags","wpbootstrap") . ':</span> ', ', ', '</div>'); ?>
 						<?php if( $user_level > 0 ) { ?>
 						<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-default edit-post">
-							<i class="icon-pencil icon-white"></i> <?php _e("Edit post","wpbootstrap"); ?>
+							<?php _e("Edit post","wpbootstrap"); ?>
 						</a>
 						<?php } ?>
 					</footer>
