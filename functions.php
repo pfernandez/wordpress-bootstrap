@@ -447,7 +447,7 @@ if( !function_exists( 'wp_bootstrap_theme_styles' ) ) {
     // and put it in the appropriate directory if you want to make any changes to the master 
     // bootstrap.css.
 		wp_register_style( 'wpbs', 
-    	get_template_directory_uri() . '/library/dist/css/styles.025da40d.min.css', 
+    	get_template_directory_uri() . '/library/dist/css/styles.f2b51322.min.css', 
     	array(), 
     	'1.0', 
     	'all' 
