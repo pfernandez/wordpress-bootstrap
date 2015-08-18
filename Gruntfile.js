@@ -41,7 +41,7 @@ module.exports = function(grunt) {
             //'bower_components/bootstrap/js/button.js',
             //'bower_components/bootstrap/js/carousel.js',
             //'bower_components/bootstrap/js/collapse.js',
-            //'bower_components/bootstrap/js/dropdown.js',
+            'bower_components/bootstrap/js/dropdown.js',
             //'bower_components/bootstrap/js/modal.js',
             //'bower_components/bootstrap/js/popover.js',
             //'bower_components/bootstrap/js/scrollspy.js',
